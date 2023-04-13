@@ -41,9 +41,9 @@
         ctx.fillRect(x, y, 1, 1);
       }
 
-      function draw(width, height, maxIterations, zoom, zoomPoint) {
+      function draw(width, height, maxIterations, zoom, zoomX,zoomY) {
         var minRe = -2, maxRe = 1, minIm = -1, maxIm = 1;
-        var reStep = (maxRe - minRe) / width / zoom + zoomPoint.re, imStep = (maxIm - minIm) / height / zoom + zoomPoint.im;
+        var reStep = (maxRe - minRe) / width / zoom + zoomX, imStep = (maxIm - minIm) / height / zoom + zoomY;
         var re = minRe;
         while (re < maxRe) {
           var im = minIm;
@@ -63,7 +63,7 @@
         }
       }
 
-      draw(450,300,100,1,zoomPoint = Complex(0,0))
+      draw(450,300,100,1,0,0)
 
     </script>
   </body>
