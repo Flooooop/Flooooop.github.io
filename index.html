@@ -40,11 +40,6 @@
                 while (x < width) {
                     while (y < height) {
                         var value = belongs((x/width/zoom+zoomX), (y/height/zoom+zoomY), maxIter)
-                        if (value == maxIter) {
-                            pixel(x,y,'black');
-                        } else {
-                            pixel(x,y,'white');
-                        }
                         pixel(x,y,'black');
                         y++
                     }
