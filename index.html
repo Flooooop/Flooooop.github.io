@@ -39,7 +39,7 @@
                 var x = 0, y = 0
                 while (x < width) {
                     while (y < height) {
-                        value = belongs((x/width/zoom)+zoomPoint.re,(y/height/zoom)+zoomPoint.im,maxIter)
+                        var value = belongs((x/width/zoom)+zoomPoint.re,(y/height/zoom)+zoomPoint.im,maxIter)
                         if (value == maxIter) {
                             pixel(x,y,'black');
                         } else {
